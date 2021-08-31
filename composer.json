@@ -1,0 +1,20 @@
+{
+    "name": "vigneshajay/test-package",
+    "description": "This package is created for testing purpose",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "VigneshAjay\\TestPackage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VigneshAjay\\TestPackage\\TestPackageServiceProvider"
+            ]
+        }
+    }
+}
