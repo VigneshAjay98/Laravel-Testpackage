@@ -50,15 +50,17 @@ class NotesController extends Controller
     public function update(Request $request, $slug)
     {
         if($request->isMethod('put')) {
-            Note::where('slug', $slug)->update(['name' => $request->name, 'description' => $request->description]);
+            Note::where('slug', $slug)->update(['name' => $request->name, 'description' => $request->description, 'slug' => $request->slug]);
 
             return response()->json(['message' => 'Note updated Successfully'], 200);
         }else {
-
+            
             if($request->name) {
                 $patch = ['name' => $request->name];
             }elseif($request->description){
                 $patch = ['description' => $request->description];
+            }elseif($request->slug){
+                $patch = ['slug' => $request->slug];
             }
 
             Note::where('slug', $slug)->update($patch);
