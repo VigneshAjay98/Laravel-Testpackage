@@ -23,11 +23,12 @@ class NotesController extends Controller
 
     public function store(Request $request)
     {
+        // print_r($request->all()); exit;
         $note = new Note;
 
-        $name = $request->name;
-        $slug = $request->slug;
-        $description = $request->name;
+        $note->name = $request->name;
+        $note->slug = $request->slug;
+        $note->description = $request->description;
 
         $note->save();
 
