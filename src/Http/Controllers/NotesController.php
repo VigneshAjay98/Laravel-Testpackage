@@ -31,7 +31,7 @@ class NotesController extends Controller
 
         $note->save();
 
-        return response()->json(['message' => 'New note created Successfully'], 200);
+        return response()->json(['message' => 'New note created Successfully'], 201);
     }
 
     public function show($slug)
