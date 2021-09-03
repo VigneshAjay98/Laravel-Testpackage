@@ -13,7 +13,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VigneshAjay\\TestPackage\\TestPackageServiceProvider"
+                "VigneshAjay\\TestPackage\\TestPackageServiceProvider",
+                "VigneshAjay\\TestPackage\\Repository\\RepositoryServiceProvider"
             ]
         }
     }
